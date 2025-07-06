@@ -26,13 +26,23 @@ https://drive.google.com/file/d/1sid8zM0wL_lp5oK6Tyf8fzV2AOCU4AFA/view?usp=drive
 https://drive.google.com/file/d/1sYZ0PqwpFhgUm_Jemj2Dd3NbEvDkdQC3/view?usp=drivesdk
 
 📈 Visualizations Included
+
 public Dashboard link :https://public.tableau.com/views/Dashboard1_17516217482610/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
 🖥️ story Pages: https://public.tableau.com/views/story1_17516220803150/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+
+
 👥 Team
+
      PINDI AKSHAYA RATNA   
+     
      M L S MANIKANTA    
+     
      KETHA J HARSHITH 
+     
      MANDELA DURGA PAVAN KUMAR 
+
 
 Team ID: LTVIP2025TMID51627
 
