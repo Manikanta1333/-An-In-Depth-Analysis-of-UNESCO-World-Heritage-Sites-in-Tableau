@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heritage Treasures - UNESCO World Heritage Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #e1eaff;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #003366;
+    }
+
+    nav a:hover,
+    nav a.active-link {
+      text-decoration: underline;
+      background: #003366;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .tableauPlaceholder {
+      width: 100%;
+      height: 800px;
+    }
+
+    .tableauViz {
+      width: 100%;
+      height: 800px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home" class="active-link">Home</a>
+    <a href="#about">About</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#story">Story</a>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <div id="home" class="content active">
+    <h1>An In-Depth Analysis of UNESCO World Heritage Sites in Tableau</h1>
+    <p>
+      <strong>"Heritage Treasures: An In-Depth Analysis of UNESCO World Heritage Sites (2019)"</strong> is a comprehensive project aimed at exploring the rich dataset of UNESCO World Heritage Sites using Tableau.
+    </p>
+    <h3>Scenarios:</h3>
+    <ul>
+      <li><strong>Heritage Sites by Country:</strong> Treemap based on the number of sites per country.</li>
+      <li><strong>Sites at Risk:</strong> Pie chart dividing ‘In Danger’ vs ‘Not in Danger’ sites.</li>
+      <li><strong>Regional Inscription Trends:</strong> Line chart showing inscription trends over time by region.</li>
+    </ul>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div id="about" class="content">
+    <h2>About the Project</h2>
+    <p>
+      This project explores UNESCO World Heritage Sites using Tableau to visualize patterns, risks, and historical trends. It includes treemaps, pie charts, and line charts based on region, status, and country.
+    </p>
+    <p>
+      The visualizations help improve awareness and support global preservation efforts.
+    </p>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboard" class="content">
+    <h2>Dashboard</h2>
+    <div class='tableauPlaceholder' id='viz_dashboard'>
+      <noscript>
+        <a href='https://public.tableau.com/views/Dashboard1_17516217482610/Dashboard1'>
+          <img alt='UNESCO World Heritage Sites Overview'
+               src='https://public.tableau.com/static/images/Da/Dashboard1_17516217482610/Dashboard1/1_rss.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https://public.tableau.com/' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='views/Dashboard1_17516217482610/Dashboard1' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/Da/Dashboard1_17516217482610/Dashboard1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </div>
+
+  <!-- STORY SECTION -->
+  <div id="story" class="content">
+    <h2>Story</h2>
+    <div class='tableauPlaceholder' id='viz_story'>
+      <noscript>
+        <a href='https://public.tableau.com/views/story1_17516220803150/Dashboard1'>
+          <img alt='Heritage Story View'
+               src='https://public.tableau.com/static/images/st/story1_17516220803150/Dashboard1/1_rss.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz'>
+        <param name='host_url' value='https://public.tableau.com/' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='views/story1_17516220803150/Dashboard1' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https://public.tableau.com/static/images/st/story1_17516220803150/Dashboard1/1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en-US' />
+        <param name='filter' value='publish=yes' />
+      </object>
+    </div>
+  </div>
+
+  <!-- TABLEAU SCRIPT -->
+  <script type='text/javascript'>
+    var script = document.createElement('script');
+    script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    document.body.appendChild(script);
+  </script>
+
+  <!-- NAVIGATION SCRIPT -->
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.content');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        sections.forEach(sec => sec.classList.remove('active'));
+        links.forEach(l => l.classList.remove('active-link'));
+
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.classList.add('active');
+        link.classList.add('active-link');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
